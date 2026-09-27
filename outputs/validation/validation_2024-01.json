@@ -1,0 +1,142 @@
+{
+  "month": "2024-01",
+  "rows_total": 2964624,
+  "rows_valid": 2831623,
+  "valid_rate": 0.9551,
+  "exclude_rules": [
+    {
+      "bit": 1,
+      "rule": "OUT_OF_PERIOD",
+      "meaning": "Pickup timestamp not in the file's month (clock errors, e.g. year 2002)",
+      "rows": 18,
+      "pct": 0.001
+    },
+    {
+      "bit": 2,
+      "rule": "NON_POSITIVE_DURATION",
+      "meaning": "Dropoff at or before pickup - timestamps cannot describe a trip",
+      "rows": 870,
+      "pct": 0.029
+    },
+    {
+      "bit": 4,
+      "rule": "TOO_SHORT",
+      "meaning": "Duration < 60s - meter tapped on/off, not a ride",
+      "rows": 34251,
+      "pct": 1.155
+    },
+    {
+      "bit": 8,
+      "rule": "TOO_LONG",
+      "meaning": "Duration > 3h - meter left running",
+      "rows": 1983,
+      "pct": 0.067
+    },
+    {
+      "bit": 16,
+      "rule": "ZERO_DISTANCE",
+      "meaning": "trip_distance <= 0 - no movement recorded",
+      "rows": 60371,
+      "pct": 2.036
+    },
+    {
+      "bit": 32,
+      "rule": "IMPLAUSIBLE_DISTANCE",
+      "meaning": "trip_distance > 100 mi - odometer/GPS error",
+      "rows": 59,
+      "pct": 0.002
+    },
+    {
+      "bit": 64,
+      "rule": "IMPLAUSIBLE_SPEED",
+      "meaning": "Implied speed > 80 mph",
+      "rows": 1107,
+      "pct": 0.037
+    },
+    {
+      "bit": 128,
+      "rule": "NEGATIVE_FARE",
+      "meaning": "fare_amount < 0 - accounting reversal/adjustment record, not a trip",
+      "rows": 37448,
+      "pct": 1.263
+    },
+    {
+      "bit": 256,
+      "rule": "UNKNOWN_LOCATION",
+      "meaning": "Pickup or dropoff zone is 264/265 (Unknown / Outside NYC)",
+      "rows": 31527,
+      "pct": 1.063
+    },
+    {
+      "bit": 512,
+      "rule": "DUPLICATE",
+      "meaning": "Exact duplicate of an earlier record",
+      "rows": 0,
+      "pct": 0.0
+    }
+  ],
+  "warn_rules": [
+    {
+      "bit": 1,
+      "rule": "PAYMENT_TYPE_0",
+      "meaning": "payment_type 0 with null passenger_count/RatecodeID (unrecorded or flex-fare trip)",
+      "rows": 140162,
+      "pct": 4.728
+    },
+    {
+      "bit": 2,
+      "rule": "UNKNOWN_RATECODE",
+      "meaning": "RatecodeID = 99 (unknown rate)",
+      "rows": 28663,
+      "pct": 0.967
+    },
+    {
+      "bit": 4,
+      "rule": "ZERO_PASSENGERS",
+      "meaning": "passenger_count = 0",
+      "rows": 31465,
+      "pct": 1.061
+    },
+    {
+      "bit": 8,
+      "rule": "HAS_REVERSAL",
+      "meaning": "Trip has a mirror-image negative record - revenue was reversed; excluded from revenue metrics",
+      "rows": 30980,
+      "pct": 1.045
+    }
+  ],
+  "gates": [
+    {
+      "gate": "row_count_matches_source_footer",
+      "passed": true,
+      "observed": 2964624,
+      "threshold": 2964624
+    },
+    {
+      "gate": "out_of_period_rate",
+      "passed": true,
+      "observed": 1e-05,
+      "threshold": "<= 0.01"
+    },
+    {
+      "gate": "every_day_present",
+      "passed": true,
+      "observed": 31,
+      "threshold": 31
+    },
+    {
+      "gate": "min_trips_per_day",
+      "passed": true,
+      "observed": 67543,
+      "threshold": ">= 10000"
+    },
+    {
+      "gate": "valid_trip_rate",
+      "passed": true,
+      "observed": 0.9551,
+      "threshold": ">= 0.85"
+    }
+  ],
+  "crz_definition_check": null,
+  "published": true
+}

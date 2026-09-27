@@ -1,0 +1,36 @@
+run_id,month,stage,status,seconds,rows,detail
+20260927T224650,2024-01,ingest,OK,0.1,,
+20260927T224650,2024-01,load_raw,OK,0.5,2964624,
+20260927T224650,2024-01,profile,OK,4.8,2964624,
+20260927T224650,2024-01,validate,OK,80.7,2831623,
+20260927T224650,2024-01,quality_gates,OK,3.3,5,
+20260927T224650,2024-01,model,OK,101.6,2964624,
+20260927T224650,2024-01,metrics,OK,41.9,8,
+20260927T224650,2025-01,ingest,OK,0.1,,
+20260927T224650,2025-01,load_raw,OK,0.2,3475226,
+20260927T224650,2025-01,profile,OK,2.6,3475226,
+20260927T224650,2025-01,validate,OK,32.2,3216893,
+20260927T224650,2025-01,quality_gates,OK,1.9,6,
+20260927T224650,2025-01,model,OK,88.1,3475226,
+20260927T224650,2025-01,metrics,OK,67.6,8,
+20260927T224650,all,evidence,OK,1556.2,,
+20260927T232408,2030-01,ingest,FAILED,21.6,,Could not retrieve https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2030-01.parquet after 4 attempts
+20260927T232434,2030-01,ingest,FAILED,17.5,,Could not retrieve https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2030-01.parquet after 4 attempts
+20260927T232505,2030-01,ingest,FAILED,0.8,,Source not available (403) - not published yet? https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2030-01.parquet
+20260927T232509,2030-01,ingest,FAILED,0.8,,Source not available (403) - not published yet? https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2030-01.parquet
+20260927T232520,2030-01,ingest,FAILED,0.8,,Source not available (403) - not published yet? https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2030-01.parquet
+20260927T232524,2024-01,ingest,OK,0.1,,
+20260927T232524,2024-01,load_raw,OK,0.2,2964624,
+20260927T232524,2024-01,profile,OK,1.8,2964624,
+20260927T232524,2024-01,validate,OK,74.6,2831623,
+20260927T232524,2024-01,quality_gates,OK,3.5,5,
+20260927T232524,2024-01,model,OK,222.8,2964624,
+20260927T232524,2024-01,metrics,OK,104.3,9,
+20260927T232524,2025-01,ingest,OK,0.2,,
+20260927T232524,2025-01,load_raw,OK,0.5,3475226,
+20260927T232524,2025-01,profile,OK,5.6,3475226,
+20260927T232524,2025-01,validate,OK,89.5,3216893,
+20260927T232524,2025-01,quality_gates,OK,5.0,6,
+20260927T232524,2025-01,model,OK,209.4,3475226,
+20260927T232524,2025-01,metrics,OK,83.0,9,
+20260927T232524,all,evidence,OK,218.1,,

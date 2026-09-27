@@ -1,0 +1,13 @@
+column,dtype,nulls,null_pct,distinct,min,max,p50,p99
+VendorID,int32,0,0.0,3,1,6,2.0,2.0
+tpep_pickup_datetime,datetime64[us],0,0.0,1575706,2002-12-31 22:59:39,2024-02-01 00:01:15,,
+tpep_dropoff_datetime,datetime64[us],0,0.0,1574780,2002-12-31 23:05:41,2024-02-02 13:56:52,,
+passenger_count,float64,140162,4.73,10,0.0,9.0,1.0,5.0
+trip_distance,float64,0,0.0,4489,0.0,312722.3,1.68,20.0
+RatecodeID,float64,140162,4.73,7,1.0,99.0,1.0,99.0
+PULocationID,int32,0,0.0,260,1,265,162.0,263.0
+DOLocationID,int32,0,0.0,261,1,265,162.0,263.0
+payment_type,int64,0,0.0,5,0,4,1.0,4.0
+fare_amount,float64,0,0.0,8970,-899.0,5000.0,12.8,75.8
+tip_amount,float64,0,0.0,4192,-80.0,428.0,2.7,17.34
+total_amount,float64,0,0.0,19241,-900.0,5000.0,20.1,103.36

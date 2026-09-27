@@ -1,0 +1,60 @@
+{
+  "holidays_2024": {
+    "bytes": 5855,
+    "file": "holidays_2024.json",
+    "retrieved_at": "2026-09-27T16:57:00+00:00",
+    "rows": 17,
+    "sha256": "4ca8ec673b802afbf44e47036d2054cf5a7a7d5728a9bc89a3f47c4562a57ec5",
+    "url": "https://date.nager.at/api/v3/PublicHolidays/2024/US"
+  },
+  "holidays_2025": {
+    "bytes": 5855,
+    "file": "holidays_2025.json",
+    "retrieved_at": "2026-09-27T16:57:18+00:00",
+    "rows": 17,
+    "sha256": "c4353f281cb804cd7979a796606f46ea968e197e6e132cb34a41b42143d0b980",
+    "url": "https://date.nager.at/api/v3/PublicHolidays/2025/US"
+  },
+  "taxi_zone_lookup": {
+    "bytes": 12331,
+    "file": "taxi_zone_lookup.csv",
+    "retrieved_at": "2026-09-27T16:56:58+00:00",
+    "rows": 265,
+    "sha256": "1a99e105092230f8620f301edcca7f80d3080642ff404d28ed957d3fa222c8ed",
+    "url": "https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv"
+  },
+  "weather_2024-01": {
+    "bytes": 2307,
+    "file": "weather_2024-01.json",
+    "retrieved_at": "2026-09-27T16:56:59+00:00",
+    "rows": 31,
+    "sha256": "ad258af67433d17fa63ae259ded3a30e5278c74a9f64aead2ff43459be3a347c",
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=40.7831&longitude=-73.9712&daily=precipitation_sum%2Csnowfall_sum%2Ctemperature_2m_mean&timezone=America%2FNew_York&start_date=2024-01-01&end_date=2024-01-31"
+  },
+  "weather_2025-01": {
+    "bytes": 2313,
+    "file": "weather_2025-01.json",
+    "retrieved_at": "2026-09-27T16:57:17+00:00",
+    "rows": 31,
+    "sha256": "f85a3b37560380f259461c970d763ea00e8fa782e96982bbdcb83547a780cc33",
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=40.7831&longitude=-73.9712&daily=precipitation_sum%2Csnowfall_sum%2Ctemperature_2m_mean&timezone=America%2FNew_York&start_date=2025-01-01&end_date=2025-01-31"
+  },
+  "yellow_tripdata_2024-01": {
+    "bytes": 49961641,
+    "content_length": 49961641,
+    "file": "yellow_tripdata_2024-01.parquet",
+    "parquet_rows": 2964624,
+    "retrieved_at": "2026-09-27T16:56:58+00:00",
+    "sha256": "c4d59da7bbc8abaeeeb1727947ee93d9891a71acb42854bd80db1571b2030510",
+    "url": "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet"
+  },
+  "yellow_tripdata_2025-01": {
+    "bytes": 59158238,
+    "content_length": 59158238,
+    "file": "yellow_tripdata_2025-01.parquet",
+    "parquet_rows": 3475226,
+    "retrieved_at": "2026-09-27T16:57:16+00:00",
+    "sha256": "9af277e4c0d3f9deb30644da822981e1e7df6af58313170fd3aa8a474485488a",
+    "url": "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2025-01.parquet"
+  }
+}

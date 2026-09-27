@@ -1,0 +1,13 @@
+# Loom demo script (target 4 minutes)
+
+Screen: the GitHub repo in a browser, plus a terminal. Before recording, run `python -m pytest -q` once
+so the terminal already shows it.
+
+| Time | Show | Say |
+|---|---|---|
+| 0:00-0:30 | README top (Problem, KPI) | "The client is a yellow-taxi fleet. On 5 Jan 2025 NYC started tolling Manhattan below 60th St. Leadership wants to know if trips in the zone got faster, whether that changed driver earnings, and whether to reposition drivers. My KPI is median in-trip speed of trips wholly inside the zone, weekday toll hours, compared with January 2024 and with a control group outside the zone." |
+| 0:30-1:05 | `docs/source_map.md` | "Four sources and two retrieval modes: TLC Parquet and CSV files over HTTPS, and two JSON APIs for weather and holidays. Everything is then modelled in SQLite, and the metrics are SQL. Key gaps: there is no CRZ flag before 2025, no route, and no wait time." |
+| 1:05-1:40 | `data/raw/manifest.json`, `outputs/validation/validation_2025-01.md` | "How I know retrieval is complete: bytes match Content-Length, the Parquet footer row count matches the rows loaded, and all 31 days are present. Validation never deletes. Ten exclude rules and four warn rules set flags. Big findings: 4% of 2025 rows are negative-fare reversals, and payment_type 0 records tripled from 4.7% to 15.5%. I kept those and ran a sensitivity check." |
+| 1:40-2:40 | README section 12 + CRZ cross-check in the validation report | **Judgement call:** "The tempting shortcut is the new `cbd_congestion_fee` column. But it only exists *after* the toll, so it can't label a 2024 baseline. I defined the zone from 38 taxi zones instead, applied it identically to both years, and turned the toll flag into a quality gate. My list agrees 93%, every listed zone is tolled on at least 94% of internal trips, and no outside zone is above 42%. If the definition ever drifts, the pipeline refuses to publish." |
+| 2:40-3:30 | `outputs/evidence_table.md` + chart | "Raw KPI is only +1.4%, but the untolled control slowed 2.3%, so the net is +3.7%. January 2024 was very wet. On dry days only, the zone is flat, but the control still slowed 3.3%, so the net is +3.4%. Demand for zone trips rose 14.5%, and fare per hour is flat. Decision: don't plan on faster trips; do keep supply in the zone." |
+| 3:30-4:00 | Terminal: `python -m pipeline.run --months 2030-01`, then `docs/evidence_rerun.log` | "Dependability: an unpublished month fails in one second with exit code 1, and the evidence isn't touched. A rerun reuses checksummed raw files and replaces month partitions in one transaction, so there are no duplicates. Everything is logged to run_history.csv, and 17 tests cover the rules." |

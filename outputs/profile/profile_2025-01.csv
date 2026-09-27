@@ -1,0 +1,14 @@
+column,dtype,nulls,null_pct,distinct,min,max,p50,p99
+VendorID,int32,0,0.0,4,1,7,2.0,2.0
+tpep_pickup_datetime,datetime64[us],0,0.0,1672077,2024-12-31 20:47:55,2025-02-01 00:00:44,,
+tpep_dropoff_datetime,datetime64[us],0,0.0,1671993,2024-12-18 07:52:40,2025-02-01 23:44:11,,
+passenger_count,float64,540149,15.54,10,0.0,9.0,1.0,5.0
+trip_distance,float64,0,0.0,4545,0.0,276423.57,1.67,19.5
+RatecodeID,float64,540149,15.54,7,1.0,99.0,1.0,99.0
+PULocationID,int32,0,0.0,261,1,265,162.0,263.0
+DOLocationID,int32,0,0.0,260,1,265,162.0,263.0
+payment_type,int64,0,0.0,6,0,5,1.0,4.0
+fare_amount,float64,0,0.0,11538,-900.0,863372.12,12.11,72.3
+tip_amount,float64,0,0.0,4197,-86.0,400.0,2.45,17.19
+total_amount,float64,0,0.0,21995,-901.0,863380.37,19.95,102.92
+cbd_congestion_fee,float64,0,0.0,3,-0.75,0.75,0.75,0.75

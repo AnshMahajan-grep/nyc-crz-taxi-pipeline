@@ -1,0 +1,9 @@
+# Large, fully reproducible from the URLs in data/raw/manifest.json
+data/raw/*.parquet
+data/processed/
+warehouse/
+logs/
+__pycache__/
+.pytest_cache/
+*.part
+*.tmp

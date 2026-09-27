@@ -1,0 +1,10 @@
+metric,definition,question,baseline,treatment,abs_change,pct_change,n_baseline,n_treatment
+valid_trip_rate,Share of all trip records passing every exclude rule,Can leadership trust this month's numbers?,0.9551373125225998,0.9256644028330819,-0.02947290968951788,-0.030857248798790395,2964624,3475226
+crz_median_speed_mph,"PROJECT KPI. Median speed (distance/duration) of CRZ-internal trips, weekday peak",Did trips inside the zone get faster?,7.742,7.851,0.10899999999999999,0.014079049341255487,546159,667597
+control_median_speed_mph,"Same as KPI, for Manhattan trips wholly outside the CRZ (no toll)",Would speeds have changed anyway?,8.652,8.454,-0.19799999999999862,-0.022884882108182923,337111,400359
+crz_p90_duration_min,90th-percentile duration of CRZ-internal weekday-peak trips,Did the slow tail (reliability) improve?,20.816666666666666,20.066666666666666,-0.75,-0.036028823058446756,546159,667597
+crz_fare_per_engaged_hour,"Sum of metered fare / sum of trip hours, CRZ-internal weekday peak, reversals excluded",Do drivers earn more per hour on the meter in the zone?,63.070011166853604,63.86136052230248,0.7913493554488795,0.012547157370169811,541482,658570
+crz_touching_trips_per_weekday,"Valid trips starting and/or ending in the CRZ, per non-holiday weekday",Did demand for zone trips fall because of the toll?,68057.16666666667,77917.57894736843,9860.412280701756,0.144884260742098,1225029,1480434
+crz_median_speed_dry_days,Sensitivity: KPI restricted to days with < 1 mm precipitation,Is the KPI change just weather?,7.831,7.835,0.0039999999999995595,0.000510790448218562,299795,608132
+control_median_speed_dry_days,Sensitivity: control-group median speed on days with < 1 mm precipitation,"Net of weather, is there still a CRZ effect?",8.746,8.457,-0.2889999999999997,-0.03304367710953575,186295,361163
+crz_median_speed_excl_pt0,Sensitivity: KPI excluding payment_type 0 records,Is the KPI change caused by the shift in payment_type 0 records?,7.725,7.802,0.07699999999999996,0.009967637540453069,530575,599745

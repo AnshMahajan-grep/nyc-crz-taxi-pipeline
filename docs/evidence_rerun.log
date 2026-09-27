@@ -1,0 +1,54 @@
+2026-09-27 23:25:24 INFO    pipeline | Run 20260927T232524 starting for months ['2024-01', '2025-01']
+2026-09-27 23:25:24 INFO    pipeline | [2024-01] ingest: start
+2026-09-27 23:25:24 INFO    pipeline.ingest | Raw input yellow_tripdata_2024-01.parquet already retrieved at 2026-09-27T16:56:58+00:00 (checksum OK) - reusing
+2026-09-27 23:25:24 INFO    pipeline.ingest | Raw input taxi_zone_lookup.csv already retrieved at 2026-09-27T16:56:58+00:00 (checksum OK) - reusing
+2026-09-27 23:25:24 INFO    pipeline.ingest | Raw input weather_2024-01.json already retrieved at 2026-09-27T16:56:59+00:00 (checksum OK) - reusing
+2026-09-27 23:25:24 INFO    pipeline.ingest | Raw input holidays_2024.json already retrieved at 2026-09-27T16:57:00+00:00 (checksum OK) - reusing
+2026-09-27 23:25:24 INFO    pipeline | [2024-01] ingest: done in 0.1s
+2026-09-27 23:25:24 INFO    pipeline | [2024-01] load_raw: start
+2026-09-27 23:25:24 INFO    pipeline | [2024-01] load_raw: done in 0.2s
+2026-09-27 23:25:24 INFO    pipeline | [2024-01] profile: start
+2026-09-27 23:25:26 INFO    pipeline | [2024-01] profile: done in 1.8s
+2026-09-27 23:25:26 INFO    pipeline | [2024-01] validate: start
+2026-09-27 23:26:41 INFO    pipeline | [2024-01] validate: done in 74.6s
+2026-09-27 23:26:41 INFO    pipeline | [2024-01] quality_gates: start
+2026-09-27 23:26:44 INFO    pipeline | [2024-01] gate row_count_matches_source_footer    PASS (observed 2964624, threshold 2964624)
+2026-09-27 23:26:44 INFO    pipeline | [2024-01] gate out_of_period_rate                 PASS (observed 1e-05, threshold <= 0.01)
+2026-09-27 23:26:44 INFO    pipeline | [2024-01] gate every_day_present                  PASS (observed 31, threshold 31)
+2026-09-27 23:26:44 INFO    pipeline | [2024-01] gate min_trips_per_day                  PASS (observed 67543, threshold >= 10000)
+2026-09-27 23:26:44 INFO    pipeline | [2024-01] gate valid_trip_rate                    PASS (observed 0.9551, threshold >= 0.85)
+2026-09-27 23:26:44 INFO    pipeline | [2024-01] quality_gates: done in 3.5s
+2026-09-27 23:26:44 INFO    pipeline | [2024-01] model: start
+2026-09-27 23:30:27 INFO    pipeline.model | Loaded 2024-01: 2964624 fact rows, 31 dates, 265 zones
+2026-09-27 23:30:27 INFO    pipeline | [2024-01] model: done in 222.8s
+2026-09-27 23:30:27 INFO    pipeline | [2024-01] metrics: start
+2026-09-27 23:32:11 INFO    pipeline.metrics | Published 9 metrics for 2024-01
+2026-09-27 23:32:11 INFO    pipeline | [2024-01] metrics: done in 104.3s
+2026-09-27 23:32:11 INFO    pipeline | [2025-01] ingest: start
+2026-09-27 23:32:12 INFO    pipeline.ingest | Raw input yellow_tripdata_2025-01.parquet already retrieved at 2026-09-27T16:57:16+00:00 (checksum OK) - reusing
+2026-09-27 23:32:12 INFO    pipeline.ingest | Raw input taxi_zone_lookup.csv already retrieved at 2026-09-27T16:56:58+00:00 (checksum OK) - reusing
+2026-09-27 23:32:12 INFO    pipeline.ingest | Raw input weather_2025-01.json already retrieved at 2026-09-27T16:57:17+00:00 (checksum OK) - reusing
+2026-09-27 23:32:12 INFO    pipeline.ingest | Raw input holidays_2025.json already retrieved at 2026-09-27T16:57:18+00:00 (checksum OK) - reusing
+2026-09-27 23:32:12 INFO    pipeline | [2025-01] ingest: done in 0.2s
+2026-09-27 23:32:12 INFO    pipeline | [2025-01] load_raw: start
+2026-09-27 23:32:12 INFO    pipeline | [2025-01] load_raw: done in 0.5s
+2026-09-27 23:32:12 INFO    pipeline | [2025-01] profile: start
+2026-09-27 23:32:18 INFO    pipeline | [2025-01] profile: done in 5.6s
+2026-09-27 23:32:18 INFO    pipeline | [2025-01] validate: start
+2026-09-27 23:33:47 INFO    pipeline | [2025-01] validate: done in 89.5s
+2026-09-27 23:33:47 INFO    pipeline | [2025-01] quality_gates: start
+2026-09-27 23:33:52 INFO    pipeline | [2025-01] gate row_count_matches_source_footer    PASS (observed 3475226, threshold 3475226)
+2026-09-27 23:33:52 INFO    pipeline | [2025-01] gate out_of_period_rate                 PASS (observed 1e-05, threshold <= 0.01)
+2026-09-27 23:33:52 INFO    pipeline | [2025-01] gate every_day_present                  PASS (observed 31, threshold 31)
+2026-09-27 23:33:52 INFO    pipeline | [2025-01] gate min_trips_per_day                  PASS (observed 79624, threshold >= 10000)
+2026-09-27 23:33:52 INFO    pipeline | [2025-01] gate valid_trip_rate                    PASS (observed 0.9257, threshold >= 0.85)
+2026-09-27 23:33:52 INFO    pipeline | [2025-01] gate crz_zone_list_matches_toll_flag    PASS (observed 0.9317, threshold >= 0.9)
+2026-09-27 23:33:52 INFO    pipeline | [2025-01] quality_gates: done in 5.0s
+2026-09-27 23:33:52 INFO    pipeline | [2025-01] model: start
+2026-09-27 23:37:21 INFO    pipeline.model | Loaded 2025-01: 3475226 fact rows, 31 dates, 265 zones
+2026-09-27 23:37:22 INFO    pipeline | [2025-01] model: done in 209.4s
+2026-09-27 23:37:22 INFO    pipeline | [2025-01] metrics: start
+2026-09-27 23:38:45 INFO    pipeline.metrics | Published 9 metrics for 2025-01
+2026-09-27 23:38:45 INFO    pipeline | [2025-01] metrics: done in 83.0s
+2026-09-27 23:42:23 INFO    pipeline.report | Evidence written: KPI 7.74 mph -> 7.85 mph (+1.4%), net of control +3.7%
+2026-09-27 23:42:23 INFO    pipeline | Run 20260927T232524 finished: 2 ok, 0 failed

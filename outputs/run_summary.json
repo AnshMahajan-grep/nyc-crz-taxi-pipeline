@@ -1,0 +1,43 @@
+{
+  "run_id": "20260927T232524",
+  "finished_at": "2026-09-27T18:12:23+00:00",
+  "months": [
+    "2024-01",
+    "2025-01"
+  ],
+  "succeeded": [
+    "2024-01",
+    "2025-01"
+  ],
+  "failed": {},
+  "results": {
+    "2024-01": {
+      "valid_rate": 0.9551,
+      "metrics": {
+        "valid_trip_rate": 0.9551373125225998,
+        "crz_median_speed_mph": 7.829,
+        "control_median_speed_mph": 8.73,
+        "crz_p90_duration_min": 20.716666666666665,
+        "crz_fare_per_engaged_hour": 63.33416618366362,
+        "crz_touching_trips_per_weekday": 66696.28571428571,
+        "crz_median_speed_dry_days": 7.964,
+        "control_median_speed_dry_days": 8.856,
+        "crz_median_speed_excl_pt0": 7.816
+      }
+    },
+    "2025-01": {
+      "valid_rate": 0.9257,
+      "metrics": {
+        "valid_trip_rate": 0.9256644028330819,
+        "crz_median_speed_mph": 7.856,
+        "control_median_speed_mph": 8.516,
+        "crz_p90_duration_min": 20.25,
+        "crz_fare_per_engaged_hour": 63.73693552960084,
+        "crz_touching_trips_per_weekday": 76145.95238095238,
+        "crz_median_speed_dry_days": 7.842,
+        "control_median_speed_dry_days": 8.524,
+        "crz_median_speed_excl_pt0": 7.81
+      }
+    }
+  }
+}

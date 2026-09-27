@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.pdf binary
+*.png binary
+*.parquet binary
+# raw inputs must stay byte-identical so their SHA-256 matches data/raw/manifest.json
+data/raw/** -text

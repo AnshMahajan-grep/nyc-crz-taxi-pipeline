@@ -1,0 +1,6 @@
+2026-09-27 23:25:20 INFO    pipeline | Run 20260927T232520 starting for months ['2030-01']
+2026-09-27 23:25:20 INFO    pipeline | [2030-01] ingest: start
+2026-09-27 23:25:20 INFO    pipeline.ingest | Downloading https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2030-01.parquet
+2026-09-27 23:25:21 ERROR   pipeline | [2030-01] FAILED: Source not available (403) - not published yet? https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2030-01.parquet
+2026-09-27 23:25:21 ERROR   pipeline | Evidence NOT regenerated because 1 month(s) failed: ['2030-01']
+2026-09-27 23:25:21 INFO    pipeline | Run 20260927T232520 finished: 0 ok, 1 failed
